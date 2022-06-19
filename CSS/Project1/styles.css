@@ -1,3 +1,149 @@
-h1 {
+/* h1 {
+    border: 5px solid red;
+}
+.cat { 
+    background-color: black;
+}
+#dog {
+    color: white;
+    width: 25%;
+    text-align: center;
+    margin-left: 37.5%;
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+}
+#mouse {
+    color: yellow;
+    border: 5px dashed blue;
+    width: 200px;
+    padding-right: 100px;
+}
+#bird {
+    color: lightgreen;
+    border: 5px ridge green;
+    width: 50vw;
+    text-align: right;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+}
+#horse {
+    color: orange;
+    margin: 0 auto;
+    padding: 100px 0 0 100px;
+} */
+/* #image1 {
+    width: 50%;
+    margin-left: 25%;
+
+}
+#imageX {
+    width: 300px;
+    width: 100%;
+    height: 300px;
+    height: 100%; 
+    /* margin-top: 25%; */
+    /* margin-bottom: 25%; */
+    /* margin-left: 25%;
+    margin-right: 25%; 
+}*/
+
+/* p {
+    font-size: 36px;
+    font-weight: bold;
+}  */
+
+/* p, changeFont {
+    color: darkblue;
+}
+#p3 {
+    color: red;
+} */
+/* The other elements did not change the color because the only id expected to change was the 3rd */
+/* p {
+ color: red;
+} */
+/* The 4 p´s changed it´s color because p is the class and goes before an id command. */
+/* p.changeFont {
+    color: green;
+} */
+/* id maintain it´s configuration even though the class indications */
+
+/* Task #12 */
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    width: 400px;
+    border: 3px solid red;
+}
+#h21 {
+    background-color: yellow;
+    text-align: left;
     
+}
+#h22 {
+    background-color: rgb(42, 165, 81);
+    text-align: center;
+}
+#h23 {
+    background-color: aqua;
+    text-align: right;
+}
+.escalonado {
+    display: flex;
+    height: 20em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+}
+/* Task #12.2 */
+
+#Turbo {
+    border: 5px solid red;
+    background-color: blue;
+    padding: 40px;
+}
+ 
+#Piston {
+    border: 5px solid red;
+    background-color: yellow;
+    padding: 40px;
+}
+
+#Jets {
+    border: 5px solid red;
+    background-color: green;
+    padding: 40px; 
+}
+.escalonado2 {
+    display: flex;
+    height: 50vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    /* align-content: flex-start;  */
+}
+.img-escalonado {
+    height: 100px;
+    width: 100px;
+}
+.div-img {
+    width: 33.33%;
+}
+#div-turbo {
+    align-items: flex-start; 
+    text-align: start;
+}
+#div-piston {
+    align-self: center;
+    text-align: center;
+}
+#div-jets {
+    align-self: flex-end; 
+    text-align: end;
 }
