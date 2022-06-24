@@ -1,0 +1,73 @@
+Task1
+SELECT * FROM hr.employees WHERE salary >=3000 AND salary <=4000;
+
+SELECT * FROM hr.employees WHERE salary BETWEEN 3000 AND 4000;
+
+Task2
+SELECT * FROM hr.employees WHERE (SELECT length(last_name) AS ExtractString) >6;
+
+SELECT (SELECT SUBSTRING (last_name, 1, 6) AS SUBCADENA), job_title, salary FROM hr.employees
+INNER JOIN hr.jobs ON hr.employees.job_id = hr.jobs.job_id;
+
+Task3
+SELECT * FROM hr.employees WHERE salary >8000 AND (SELECT to_char(hire_date,'YYYY')) >'1996';
+#OTHER WAY, SAME RESULT
+SELECT *, (SELECT to_char(hire_date,'YYYY')) AS YEAR_TO_NUMBER FROM hr.employees WHERE salary >8000 AND (SELECT to_char(hire_date,'YYYY')) >'1996';
+
+Task4
+All employees, all departments.
+SELECT e.first_name, e.last_name, d.department_name FROM hr.employees e
+INNER JOIN hr.departments d
+ON e.department_id = d.department_id
+ORDER BY e.hire_date DESC;
+
+All employees, only sales department
+
+SELECT e.first_name, e.last_name, d.department_name FROM hr.employees e
+INNER JOIN hr.departments d
+ON e.department_id = d.department_id
+WHERE d.department_name = 'Sales'
+ORDER BY e.hire_date DESC;
+
+Task5
+SELECT 
+    e.first_name AS "FIRST", 
+    e.last_name AS "LAST", 
+    e.email AS "EMAIL",    
+    d.department_name AS "DEPT",  
+    l.city AS "CITY"
+FROM hr.employees e
+INNER JOIN hr.departments d
+    ON e.department_id = d.department_id
+INNER JOIN hr.locations l
+    ON l.location_id = d.location_id;
+
+Task6
+SELECT 
+    e.first_name AS "FIRST", 
+    e.last_name AS "LAST", 
+    e.email AS "EMAIL", 
+    em.first_name AS "MANAGER", 
+    d.department_name AS "DEPT", 
+    l.city AS "CITY"
+FROM hr.employees e
+LEFT JOIN hr.departments d
+    ON e.department_id = d.department_id
+LEFT JOIN employees em
+    ON em.employee_id = e.manager_id
+LEFT JOIN hr.locations l
+    ON l.location_id = d.location_id;
+
+Task7
+SELECT 
+    *
+    FROM
+    (
+        SELECT 
+        date_part('year', hire_date) AS "YEAR",
+        count(employee_id) AS "CONTEO"
+        FROM hr.employees
+        GROUP BY "YEAR" 
+    ) AS "AGENDA"
+WHERE "CONTEO" >1
+ORDER BY "YEAR";
