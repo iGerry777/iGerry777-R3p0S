@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery 05 </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="text-white" id="Header">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center text-white text-decoration-none" id="logo">
+                The Desserts <i class="fa fa-comment" aria-hidden="true"></i>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto justify-content-center">
+                <li class="nav-item dropdown" id="li-press">
+                    <a class="nav-link" href="#" data-bs-toggle="dropdown">Trending</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Tech</a></li>
+                        <li><a class="dropdown-item" href="#">Politics</a></li>
+                        <li><a class="dropdown-item" href="#">About</a></li>
+                        <li><a class="dropdown-item" href="#">FAQ</a></li>
+                        <li><a class="dropdown-item" href="#">Contact</a></li>
+                    </ul>   
+                </li>
+
+              <li class="nav-item dropdown" id="li-press">
+                <a class="nav-link" href="#" data-bs-toggle="dropdown">Tech</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Latest</a></li>
+                    <li><a class="dropdown-item" href="#">Programming</a></li>
+                    <li><a class="dropdown-item" href="#">App Reviews</a></li>
+                </ul>   
+            </li>
+            <li class="nav-item dropdown" id="li-press">
+                <a class="nav-link" href="#" data-bs-toggle="dropdown">Politics</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Headlines</a></li>
+                    <li><a class="dropdown-item" href="#">The Facts</a></li>
+                    <li><a class="dropdown-item" href="#">The Gossip</a></li>
+                </ul>   
+            </li>
+            <li class="nav-item dropdown" id="li-press">
+                <a class="nav-link" href="#" data-bs-toggle="dropdown">About</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Our Story</a></li>
+                    <li><a class="dropdown-item" href="#">Donate</a></li>
+                </ul>   
+            </li>
+            <li class="nav-item dropdown" id="li-press">
+                <a class="nav-link" href="#" data-bs-toggle="dropdown">FAQ</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Policy</a></li>
+                    <li><a class="dropdown-item" href="#">Careers</a></li>
+                </ul>   
+            </li>
+            <li class="nav-item dropdown" id="li-press">
+                <a class="nav-link" href="#" data-bs-toggle="dropdown">Contact</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Email</a></li>
+                    <li><a class="dropdown-item" href="#">Phone</a></li>
+                </ul>   
+            </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+        <br>
+        <div id="header2"><h2>Image Gallery of your favorite treats</h2></div>
+      <div class="container">
+        <div id="carousel" class="carousel">
+          <div class="slides">
+            <div class="slide" data-state="active">Slide 1</div>
+            <div class="slide" data-state="active">Slide 2</div>
+            <div class="slide" data-state="active">Slide 3</div>
+            <div class="slide" data-state="active">Slide 4</div>
+            <div class="slide" data-state="active">Slide 5</div>
+            <div class="slide" data-state="active">Slide 6</div>
+          </div>
+          <div class="indicators">
+            <input class="indicator" name="indicator" data-slide="1" data-state="active" checked type="radio" />
+            <input class="indicator" name="indicator" data-slide="2" type="radio" />
+            <input class="indicator" name="indicator" data-slide="3" type="radio" />
+          </div>
+      </div>
+      <button id="button-text" onclick="previous()">Previous</button>
+      <button id="button-text" onclick="next()">Next</button>
+      <script src="script.js"></script>
+      </div>
+
+        <footer class="py-3 my-4">
+            <h2 id="logo2">The Desserts</h2>
+            <ul class="nav justify-content-center pb-3 mb-3">
+            <li class="nav-item nav-item2"><a href="#" class="nav-link px-2 ">Home</a></li>
+            <li class="nav-item nav-item2"><a href="#" class="nav-link px-2 ">Tech</a></li>
+            <li class="nav-item nav-item2"><a href="#" class="nav-link px-2 ">Politics</a></li>
+            <li class="nav-item nav-item2"><a href="#" class="nav-link px-2 ">About</a></li>
+            <li class="nav-item nav-item2"><a href="#" class="nav-link px-2 ">FAQ</a></li>
+            <li class="nav-item nav-item2"><a href="#" class="nav-link px-2 ">Contact</a></li>
+          </ul>
+         
+          <p class="text-center" id="copyright">The News © 1983</p>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>    
+</body>
+</html>

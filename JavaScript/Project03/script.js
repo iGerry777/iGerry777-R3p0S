@@ -9,7 +9,7 @@ function add() {
     var add = 0;
     for (let index = 0; index < array.length; index++) {
         const element = array[index];
-        add = add + element;
-        document.getElementById("div-text").innerHTML = "The sum of all your numbers is " +add;
+        add = add + (element*1);
     }
+    document.getElementById("div-text").innerHTML = "The sum of all your numbers is " +add;
 }
